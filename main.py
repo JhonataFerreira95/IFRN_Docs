@@ -137,7 +137,7 @@ while contador <=5:
     resultado = [codigo_aluno]
     nota.append(resultado)
 
-    alternativ: contador +=1
+    # alternativ: contador +=1
 
     contador = contador + 1
 
