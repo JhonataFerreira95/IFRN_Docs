@@ -6,11 +6,8 @@ while True:
             print("Por favor, digite um número inteiro positivo.")
             continue
 
-        print("Qual base desejada:")
-        print("[1] Binário")
-        print("[2] Octal")
-        print("[3] Hexadecimal")
-
+        print("Qual base desejada:\n[1] Binário\n[2] Octal\n[3] Hexadecimal\n")
+       
         opcao = int(input("Digite sua opção: "))
 
         if opcao == 1:
