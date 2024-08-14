@@ -78,3 +78,21 @@ passos = passos % n
 numeros_rotacionados = numeros[-passos:] + numeros[:-passos]
 
 print("Lista rotacionada:", numeros_rotacionados)
+
+# 4. Escreva um programa que leia uma lista de números inteiros fornecida pelo
+# usuário e utilize uma list comprehension para gerar uma nova lista contendo
+# os quadrados de todos os números ímpares da lista original.
+# Exemplo: Digite os números separados por espaço: 1 2 3 4 5 6 7 8 9 10
+
+# Quadrados dos números ímpares: [1, 9, 25, 49, 81]
+
+numeros = []
+entrada = input("Digite os números inteiros (pressione Enter para finalizar): ")
+
+while entrada:
+    numeros += [int(entrada)]
+    entrada = input("Digite o próximo número (ou pressione Enter para finalizar): ")
+
+quadrados_impares = [num ** 2 for num in numeros if num % 2 != 0]
+
+print("Quadrados dos números ímpares:", quadrados_impares)
