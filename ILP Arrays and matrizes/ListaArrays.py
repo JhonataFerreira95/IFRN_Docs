@@ -32,3 +32,25 @@ print("Lista sem duplicatas:", numeros_unicos)
 # pelo usuário e um número alvo. O programa deve encontrar todos os
 # pares de números na lista cuja soma seja igual ao número alvo.
 # 1. Exemplo: Digite os números separados por espaço: 2 4 3 5 7
+
+numeros = []
+entrada = input("Digite os números inteiros (pressione Enter para finalizar): ")
+
+while entrada:
+    numeros.append(int(entrada))
+    entrada = input("Digite o próximo número (ou pressione Enter para finalizar): ")
+
+alvo = int(input("Digite o número alvo: "))
+
+pares_encontrados = []
+for i in range(len(numeros)):
+    for j in range(i + 1, len(numeros)):
+        if numeros[i] + numeros[j] == alvo:
+            pares_encontrados.append((numeros[i], numeros[j]))
+
+if pares_encontrados:
+    print("Pares encontrados que somam ao número alvo:")
+    for par in pares_encontrados:
+        print(par)
+else:
+    print("Nenhum par encontrado que some ao número alvo.")
