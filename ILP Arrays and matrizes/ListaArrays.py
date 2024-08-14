@@ -54,3 +54,27 @@ if pares_encontrados:
         print(par)
 else:
     print("Nenhum par encontrado que some ao número alvo.")
+
+# 3. Escreva um programa que leia uma lista de números inteiros fornecida pelo
+# usuário e um número de passos. O programa deve rotacionar a lista para a
+# direita pelo número de passos especificado.
+# Exemplo: Digite os números separados por espaço: 1 2 3 4 5
+
+# Digite o número de passos: 2
+# Lista rotacionada: [4, 5, 1, 2, 3]
+
+numeros = []
+entrada = input("Digite os números inteiros (pressione Enter para finalizar): ")
+
+while entrada:
+    numeros.append(int(entrada))
+    entrada = input("Digite o próximo número (ou pressione Enter para finalizar): ")
+
+passos = int(input("Digite o número de passos: "))
+
+n = len(numeros)
+passos = passos % n 
+
+numeros_rotacionados = numeros[-passos:] + numeros[:-passos]
+
+print("Lista rotacionada:", numeros_rotacionados)
