@@ -91,3 +91,71 @@ for linha in matriz2:
 print("Matriz Resultado:")
 for linha in matriz_resultado:
     print(" ".join(str(valor) for valor in linha))
+
+# 3. Escreva um programa para realizar uma operação aritmética (+, -,
+# /, *, %) entre os valores de duas matrizes de tamanho m por n. .
+# A quantidade de linhas e colunas deve ser definida pelo usuário,
+# bem como os valores de cada matriz. O programa deverá
+# apresentar um menu com as opções de operações e realiza-las até
+# que o usuário digite o valor 0 como operação. Ao finalizar as
+# operações o programa deverá exibir a matriz resultado e retornar
+# para o menu inicial. Ao encerrar o programa, deverá ser exibida
+# uma mensagem de encerramento ao usuário.
+
+m = int(input("Digite o número de linhas: "))
+n = int(input("Digite o número de colunas: "))
+
+matriz1 = [[0 for _ in range(n)] for _ in range(m)]
+matriz2 = [[0 for _ in range(n)] for _ in range(m)]
+matriz_resultado = [[0 for _ in range(n)] for _ in range(m)]
+for i in range(m):
+    for j in range(n):
+        while True:
+            entrada = input("Digite um valor para matriz1 na posição ({}, {}): ".format(i, j))
+            if entrada:
+                try:
+                    matriz1[i][j] = int(entrada)
+                    break 
+                except ValueError:
+                    print("Por favor, insira um número inteiro válido.")
+for i in range(m):
+    for j in range(n):
+        while True:
+            entrada = input("Digite um valor para matriz2 na posição ({}, {}): ".format(i, j))
+            if entrada:
+                try:
+                    matriz2[i][j] = int(entrada)
+                    break 
+                except ValueError:
+                    print("Por favor, insira um número inteiro válido.")
+while True:
+    print("\nMenu de operações:")
+    print("1 - Adição (+)")
+    print("2 - Subtração (-)")
+    print("3 - Multiplicação (*)")
+    print("4 - Divisão (/) (resultado inteiro)")
+    print("5 - Módulo (%)")
+    print("0 - Sair")
+    
+    operacao = input("Escolha uma operação: ")
+    if operacao == '0':
+        print("Encerrando o programa. Até logo!")
+        break
+    for i in range(m):
+        for j in range(n):
+            if operacao == '1':
+                matriz_resultado[i][j] = matriz1[i][j] + matriz2[i][j]
+            elif operacao == '2':
+                matriz_resultado[i][j] = matriz1[i][j] - matriz2[i][j]
+            elif operacao == '3':
+                matriz_resultado[i][j] = matriz1[i][j] * matriz2[i][j]
+            elif operacao == '4':
+                if matriz2[i][j] != 0:
+                    matriz_resultado[i][j] = matriz1[i][j] // matriz2[i][j]
+                else:
+                    matriz_resultado[i][j] = 0
+            elif operacao == '5':
+                matriz_resultado[i][j] = matriz1[i][j] % matriz2[i][j]
+    print("Matriz Resultado:")
+    for linha in matriz_resultado:
+        print(" ".join(str(valor) for valor in linha))
