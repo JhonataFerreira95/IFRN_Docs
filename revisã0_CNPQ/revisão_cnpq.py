@@ -51,3 +51,5 @@ if algoritmo.upper() == "SJF":
     print(f"O tempo médio foi de {tempo_medio:.2f}")  # Imprime o tempo medio formatado
 else:
     print("Algoritmo não suportado.")  # Informa que o algoritmo não é suportado
+
+# Qualquer coisa JG vc me fala onde tu não entendeu bem.!
