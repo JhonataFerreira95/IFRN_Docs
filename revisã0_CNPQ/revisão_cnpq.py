@@ -1,5 +1,3 @@
-import sys  # Importa o modulo sys, mas não é usado no codgo
-
 # Pede ao usuario quantos processos deseja simular e converte a entrada para um inteiro
 numero_de_processos = int(input("Quantos processos deseja simular? "))
 processos = []  # Cria uma lista vazia para armazenar os tempos dos procosses
