@@ -47,3 +47,29 @@ print(maior_pais)
 # aprovado se sua média for maior ou igual a 7. Por exemplo, se o dicionário
 # for {"Ana": [8.5, 9.0, 7.5], "Bruno": [6.0, 5.5, 4.0], "Carla": [7.0, 8.0, 9.0]},
 # o programa deve exibir {"Ana": 8.33, "Carla": 8.0}.
+
+notas_alunos = {"Ana": [8.5, 9.0, 7.5], "Bruno": [6.0, 5.5, 4.0], "Carla": [7.0, 8.0, 9.0]}
+alunos_aprovados = {} 
+
+for aluno, notas in notas_alunos.items():
+    media = sum(notas) / len(notas)
+
+    if media >= 7:
+        alunos_aprovados[aluno] = round(media, 2)
+print(alunos_aprovados)
+
+# Conjuntos:
+# 5. Escreva um programa que receba dois conjuntos de números inteiros como
+# entrada e exiba um novo conjunto com os elementos que estão em ambos
+# os conjuntos. Por exemplo, se os conjuntos forem {1, 2, 3, 4} e {3, 4, 5, 6},
+# o programa deve exibir {3, 4}.
+
+conjunto1 = {1, 2, 3, 4}
+conjunto2 = {3, 4, 5, 6}  
+
+conjunto_comum = set()  
+for numero in conjunto1:
+    if numero in conjunto2:
+        conjunto_comum.add(numero) 
+        
+print(conjunto_comum)
