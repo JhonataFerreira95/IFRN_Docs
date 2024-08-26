@@ -71,5 +71,20 @@ conjunto_comum = set()
 for numero in conjunto1:
     if numero in conjunto2:
         conjunto_comum.add(numero) 
-        
+
 print(conjunto_comum)
+
+# 6. Escreva um programa que receba um conjunto de strings e exiba um novo
+# conjunto com as strings que são palíndromos. Um palíndromo é uma palavra
+# que é igual a ela mesma quando lida de trás para frente. Por exemplo, se o
+# conjunto for {"arara", "casa", "ovo", "radar"}, o programa deve exibir
+# {"arara", "ovo", "radar"}.
+
+conjunto_strings = {"arara", "casa", "ovo", "radar"} 
+conjunto_palindromos = set()
+
+for palavra in conjunto_strings:
+    if palavra == palavra[::-1]:
+        conjunto_palindromos.add(palavra)  
+
+print(conjunto_palindromos)
