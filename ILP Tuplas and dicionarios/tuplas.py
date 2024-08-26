@@ -40,3 +40,10 @@ for pais, populacao in dicionario_paises.items():
         maior_pais = pais
 
 print(maior_pais)
+
+# 4. Escreva um programa que receba como entrada um dicionário que mapeia
+# nomes de alunos para suas notas e exiba um novo dicionário com os nomes
+# dos alunos aprovados e suas respectivas médias. Considere que um aluno é
+# aprovado se sua média for maior ou igual a 7. Por exemplo, se o dicionário
+# for {"Ana": [8.5, 9.0, 7.5], "Bruno": [6.0, 5.5, 4.0], "Carla": [7.0, 8.0, 9.0]},
+# o programa deve exibir {"Ana": 8.33, "Carla": 8.0}.
