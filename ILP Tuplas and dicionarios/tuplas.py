@@ -28,3 +28,15 @@ print(tupla_ordenada)
 # países para suas populações e exiba o nome do país com a maior
 # população. Por exemplo, se o dicionário for {"Brasil": 211.8, "China":
 # 1400.5, "Índia": 1366.4}, o programa deve exibir "China".
+
+dicionario_paises = {"Brasil": 211.8, "China": 1400.5, "Índia": 1366.4}
+
+maior_pais = ""
+maior_populacao = 0
+
+for pais, populacao in dicionario_paises.items():
+    if populacao > maior_populacao:
+        maior_populacao = populacao
+        maior_pais = pais
+
+print(maior_pais)
